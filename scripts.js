@@ -6,6 +6,50 @@ const resultLabel = document.getElementById("result-label");
 const resultValue = document.getElementById("result-value");
 const resultDetail = document.getElementById("result-detail");
 
+const gendered = {
+  "male": {label: "Masculino", value: "Male"},
+  "female": {label: "Feminino", value: "Female"},
+  "non_binary": {label: "Não binário", value: "Non-Binary"}
+};
+
+const chronotyped = {
+  "morning": {label: "Matutino", value: "Early Bird"},
+  "evening": {label: "Noturno", value: "Night Owl"},
+  "intermediate": {label: "Intermediário", value: "Intermediate"}
+};
+
+const occupations = {
+  "student": {label: "Estudante", value: "Student"},
+  "office_worker": {label: "Trabalhador", value: "Professional"},
+  "retired": {label: "Aposentado", value: "Retired"},
+  "freelancer": {label: "Freelancer", value: "Freelancer"},
+  "unemployed": {label: "Desempregado", value: "Unemployed"}
+};
+
+const appMostUsed = {
+  "short_form_video": {label: "Vídeos curtos", value: "Short-Form Video"},
+  "gaming": {label: "Jogos", value: "Gaming"},
+  "social_media": {label: "Redes sociais", value: "Social Media"},
+  "messaging": {label: "Mensagens", value: "Messaging"},
+  "video_streaming": {label: "Streaming de vídeo", value: "Streaming"},
+  "news": {label: "Notícias", value: "News"},
+  "e_reading": {label: "Leitura online", value: "E-Reading"},
+};
+
+function populateSelect(name, options) {
+  const select = form.elements.namedItem(name);
+  Object.values(options).forEach(function(option) {
+    const item = document.createElement("option");
+    item.value = option.value;
+    item.textContent = option.label;
+    select.append(item);
+  });
+}
+
+populateSelect("gender", gendered);
+populateSelect("chronotype", chronotyped);
+populateSelect("occupation", occupations);
+populateSelect("primary_app_category", appMostUsed);
 function decimalHour(value) {
   const parts = value.split(":").map(Number);
   return parts[0] + parts[1] / 60;
