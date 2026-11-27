@@ -17,6 +17,24 @@
             <p>Informe sua rotina, o uso de telas e as condições do ambiente. A API usa o modelo de classificação do
                 projeto para estimar uma categoria de dívida de sono.</p>
         </header>
+        <aside class="notice classification-guide" aria-labelledby="classification-title">
+            <h2 id="classification-title">Como interpretar as classificações</h2>
+            <div class="classification-grid">
+                <div class="classification-item">
+                    <strong>Sem déficit (No Debt)</strong>
+                    <p>O registro foi classificado na categoria sem déficit de sono.</p>
+                </div>
+                <div class="classification-item">
+                    <strong>Déficit leve (Mild)</strong>
+                    <p>O registro foi classificado na categoria de déficit leve de sono.</p>
+                </div>
+                <div class="classification-item">
+                    <strong>Déficit moderado ou grave (Moderate/Severe)</strong>
+                    <p>As categorias moderada e grave foram agrupadas no treinamento do modelo.</p>
+                </div>
+            </div>
+            <p class="classification-note">A estimativa vem de dados simulados e não representa diagnóstico médico.</p>
+        </aside>
         <!-- <aside class="notice"><strong>Projeto acadêmico:</strong> o modelo foi treinado com dados simulados. O resultado
             é apenas uma demonstração e não substitui avaliação ou orientação profissional.</aside>
         <div class="api"><span>API de previsão</span><code>http://127.0.0.1:5000/digital-insomnia/predict</code></div> -->
