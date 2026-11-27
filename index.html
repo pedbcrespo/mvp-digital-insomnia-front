@@ -33,11 +33,7 @@
                     <p>As categorias moderada e grave foram agrupadas no treinamento do modelo.</p>
                 </div>
             </div>
-            <p class="classification-note">A estimativa vem de dados simulados e não representa diagnóstico médico.</p>
         </aside>
-        <!-- <aside class="notice"><strong>Projeto acadêmico:</strong> o modelo foi treinado com dados simulados. O resultado
-            é apenas uma demonstração e não substitui avaliação ou orientação profissional.</aside>
-        <div class="api"><span>API de previsão</span><code>http://127.0.0.1:5000/digital-insomnia/predict</code></div> -->
 
         <form id="sleep-form">
             <fieldset>
@@ -99,16 +95,13 @@
                 </div>
             </fieldset>
 
-            <div class="actions"><button id="submit-button" type="submit">Estimar categoria</button><span
-                    class="action-hint">Os campos são enviados à API local para gerar a previsão.</span></div>
+            <div class="actions"><button id="submit-button" type="submit">Estimar categoria</button></div>
             <section id="result" role="status" aria-live="polite">
                 <p id="result-label">Categoria estimada</p>
                 <h2 id="result-value"></h2>
                 <p id="result-detail"></p>
             </section>
         </form>
-        <footer>Estimativa produzida por um classificador treinado com dados simulados. Não representa diagnóstico
-            médico.</footer>
     </main>
     <script src="scripts.js" defer></script>
 </body>
